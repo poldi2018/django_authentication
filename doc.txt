@@ -1,0 +1,70 @@
+pre:
+pip3 install django==1.11.24
+sudo pip3 install psycopg2~=2.7.3.1
+sudo pip3 install psycopg2-binary
+sudo pip3 install dj_database_url
+
+CREATION OF APP
+# create empty project
+#startproject via django-admin:
+django-admin startproject django_todo .
+#start server:
+python3 manage.py runserver
+# create app:  
+django-admin startapp todo
+#makemigrations:
+python3 manage.py makemigrations
+# migrate:
+python3 manage.py migrate
+
+# set app under INSTALLED_APPS
+# set allowed hosts
+#create superuser:
+python3 manage.py createsuperuser
+
+
+
+SQLITE:
+#start sqlite3:
+sqlite3 db.sqlite3
+#migrate database:
+python3 manage.py migrate
+# display headers:
+.headers on
+#use columns:
+.mode column
+#create superuser:
+python3 manage.py createsuperuser
+
+TESTING:
+coverage run manage.py test
+coverage run --source=todo manage.py test
+coverage report
+coverage html
+
+DEPLOY:
+heroku create poldis-simple-django-todo --region eu
+heroku git:remote -a poldis-simple-django-todo
+heroku addons:create heroku-postgresql:hobby-dev
+heroku config
+# execute after connecting to db:
+python3 manage.py migrate
+
+
+POSTGRESQL:
+To migrate existing data from a previous major version of PostgreSQL run:
+  brew postgresql-upgrade-database
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  pg_ctl -D /usr/local/var/postgres start
+
+
+
+    """
+    new_item = Item()
+    new_item.name = request.POST.get('name')
+    new_item.done = 'done' in request.POST
+    new_item.save()
+    """
