@@ -3,6 +3,8 @@ pip3 install django==1.11.24
 sudo pip3 install psycopg2~=2.7.3.1
 sudo pip3 install psycopg2-binary
 sudo pip3 install dj_database_url
+sudo pip3 install django_forms_bootstrap
+
 
 CREATION OF APP
 # create empty project
