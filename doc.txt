@@ -5,6 +5,9 @@ sudo pip3 install psycopg2-binary
 sudo pip3 install dj_database_url
 sudo pip3 install django_forms_bootstrap
 
+GIT:
+#remove pushed file:
+git rm -r --cached <path/file.ext>
 
 CREATION OF APP
 # create empty project
