@@ -135,7 +135,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 """ 
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gail.com'
+EMAIL_HOST = 'smtp.gmail.net'
 EMAIL_HOST_USER = os.getenv('EMAIL_ADDRESS')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_PORT = 587 """
