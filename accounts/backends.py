@@ -22,7 +22,7 @@ class EmailAuth:
     
     def get_user(self, user_id):
         """
-        Used by the Django authentiation system to retrieve a user instance
+        Used by the Django authentication system to retrieve a user instance
         """
         
         try:

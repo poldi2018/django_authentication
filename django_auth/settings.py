@@ -131,8 +131,9 @@ STATICFILES_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 """ 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.net'
